@@ -43,7 +43,7 @@ public class AccountTest {
 
     }
     @Test
-    public void shouldReturnFalseIfEmailDoesNotContainsAt(){
+    public void shouldReturnTrueIfEmailDoesNotContainsAt(){
         //given
         String password = "Aaaaaaaa";
         String email = "email@email.cm";
@@ -51,6 +51,17 @@ public class AccountTest {
         boolean isCreated = accountManager.createAccount(email,password);
         //then
         assertTrue(isCreated);
+    }
+
+    @Test
+    public void shouldReturnFalseIfEmailDoesNotContainsAt(){
+        //given
+        String password = "Aaaaaaaa";
+        String email = "emailemail.cm";
+        //when
+        boolean isCreated = accountManager.createAccount(email,password);
+        //then
+        assertFalse(isCreated);
     }
 
 
