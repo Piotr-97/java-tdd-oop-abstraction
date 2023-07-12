@@ -1,0 +1,32 @@
+package com.booleanuk.core;
+
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+public class AccountTest {
+
+
+    AccountManager accountManager;
+
+    @BeforeEach
+    public void preapareForTests(){
+        accountManager = new AccountManager();
+    }
+
+    @Test
+    public void shouldReturnFalseWhenPasswordIsLessThan8Characters(){
+        //given
+        String password = "Aaaaaaa";
+        String email = "email@email.cm";
+
+        //when
+        boolean isCreated = accountManager.createAccount(email,password);
+
+        //then
+        assertFalse(isCreated);
+
+    }
+}
