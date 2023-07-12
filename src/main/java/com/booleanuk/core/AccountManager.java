@@ -6,7 +6,6 @@ public class AccountManager {
 
 
     public boolean createAccount(String email, String password){
-
-
+        if()
     }
 }

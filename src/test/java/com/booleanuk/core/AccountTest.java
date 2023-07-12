@@ -29,4 +29,17 @@ public class AccountTest {
         assertFalse(isCreated);
 
     }
+    @Test
+    public void shouldReturnTrueWhenPasswordIsEqualsOrMoreThan8Characters(){
+        //given
+        String password = "Aaaaaaaa";
+        String email = "email@email.cm";
+
+        //when
+        boolean isCreated = accountManager.createAccount(email,password);
+
+        //then
+        assertTrue(isCreated);
+
+    }
 }
