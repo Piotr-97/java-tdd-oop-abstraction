@@ -42,4 +42,16 @@ public class AccountTest {
         assertTrue(isCreated);
 
     }
+    @Test
+    public void shouldReturnFalseIfEmailDoesNotContainsAt(){
+        //given
+        String password = "Aaaaaaaa";
+        String email = "email@email.cm";
+        //when
+        boolean isCreated = accountManager.createAccount(email,password);
+        //then
+        assertTrue(isCreated);
+    }
+
+
 }
