@@ -34,4 +34,7 @@ public class User {
     public void setActivated(boolean activated) {
         isActivated = activated;
     }
+
+
+
 }
